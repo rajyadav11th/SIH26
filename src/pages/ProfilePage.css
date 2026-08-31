@@ -1,0 +1,349 @@
+/* ===== Profile Page ===== */
+
+.profile-header-section {
+  position: relative;
+  padding: 100px var(--space-xl) 0;
+  overflow: hidden;
+}
+
+.profile-header-bg {
+  position: absolute;
+  inset: 0;
+  bottom: 50%;
+  background: var(--gradient-glow);
+  pointer-events: none;
+}
+
+.profile-header-card {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-2xl);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--glass-shadow);
+}
+
+.profile-avatar-section {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.profile-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0, 188, 212, 0.3);
+}
+
+.profile-avatar-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.profile-meta-row {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.profile-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+}
+
+.profile-edit-btn {
+  flex-shrink: 0;
+}
+
+/* Body */
+.profile-body {
+  padding-top: var(--space-2xl);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+/* Cards */
+.profile-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.profile-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.profile-card-header h2 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.profile-card-header svg {
+  color: var(--text-accent);
+  flex-shrink: 0;
+}
+
+.profile-card-body {
+  padding: var(--space-lg);
+}
+
+/* Info List */
+.profile-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.profile-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  gap: var(--space-md);
+}
+
+.profile-info-row:last-child {
+  border-bottom: none;
+}
+
+.profile-info-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  min-width: 140px;
+}
+
+.profile-info-value {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  text-align: right;
+  word-break: break-word;
+}
+
+/* Edit Form */
+.profile-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.profile-edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-edit-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.profile-edit-input {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: border-color var(--transition-fast);
+}
+
+.profile-edit-input:focus {
+  border-color: var(--border-accent);
+}
+
+/* Medical Stack */
+.profile-medical-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Tags */
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.profile-tag {
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.profile-tag--danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.profile-tag--warning {
+  background: rgba(251, 191, 36, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+/* Medications */
+.profile-med-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.profile-med-item:last-child {
+  border-bottom: none;
+}
+
+.profile-med-name {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.profile-med-freq {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.profile-med-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--accent-400);
+  font-weight: 500;
+}
+
+/* Visits */
+.profile-visits-card {
+  margin-top: 0;
+}
+
+.profile-visits-table {
+  width: 100%;
+}
+
+.profile-visits-header-row {
+  display: grid;
+  grid-template-columns: 120px 140px 150px 1fr;
+  gap: var(--space-md);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-visits-row {
+  display: grid;
+  grid-template-columns: 120px 140px 150px 1fr;
+  gap: var(--space-md);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  align-items: center;
+}
+
+.profile-visits-row:last-child {
+  border-bottom: none;
+}
+
+.profile-visit-date {
+  color: var(--text-accent);
+  font-weight: 500;
+}
+
+.profile-visit-dept {
+  color: var(--text-muted);
+}
+
+.profile-visit-summary {
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header-section {
+    padding: 90px var(--space-md) 0;
+  }
+
+  .profile-avatar-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-name {
+    font-size: 1.4rem;
+  }
+
+  .profile-meta-row {
+    justify-content: center;
+  }
+
+  .profile-visits-header-row,
+  .profile-visits-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-visits-header-row span:nth-child(3),
+  .profile-visits-header-row span:nth-child(4),
+  .profile-visits-row span:nth-child(3),
+  .profile-visits-row span:nth-child(4) {
+    display: none;
+  }
+}
