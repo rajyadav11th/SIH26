@@ -54,7 +54,7 @@ Ensure you have **Node.js** (version 18 or newer recommended) and **npm** instal
 
 bash
 
-git clone https://github.com/rajyadav11th/digital_healthcare_and_consultation-platform/edit/main/README.md
+git clone https://github.com/rajyadav11th/digital_healthcare_and_consultation-platform.git
 cd carepulse-healthcare
 
 Use code with caution.
